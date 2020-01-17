@@ -12,23 +12,24 @@ let sqlLite = require("nativescript-sqlite");
 export class ItemsComponent implements OnInit {
     items: Array<Item>;
     people = [];
-
-    // This pattern makes use of Angular’s dependency injection implementation to
-    // inject an instance of the ItemService service into this class.
-    // Angular knows about this service because it is included in your app’s main NgModule,
-    // defined in app.module.ts.
+    
     constructor(private itemService: ItemService) { }
 
     ngOnInit(): void {
-        // for (let index = 0; index < 1000; index++) {
-        //     this.itemService.insert();
-        // }
+    }
+
+    addTap(): void {
+        this.itemService.insert();
         
-    //   this.itemService.fetch();
-    //   setTimeout(() => {
-    //     this.people = this.itemService.inspections;
-    //   }, 15);
-      
+        // Use this if you want to seed the database with a bunch of data
+        // this.itemService.seedDB();
+    }
+
+    refreshTap(): void {
+        this.itemService.fetch();
+        setTimeout(() => {
+            this.people = this.itemService.inspections;
+        }, 15);
     }
 }
 

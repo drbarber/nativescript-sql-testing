@@ -20,14 +20,14 @@ export class ItemsComponent implements OnInit {
     }
 
     addTap(): void {
-        this.itemService.insert();
+        // this.itemService.insert();
         
         // Use this if you want to seed the database with a bunch of data
         // this.itemService.seedDB();
     }
 
     refreshTap(): void {
-        this.itemService.fetch();
+        // this.itemService.fetch();
         setTimeout(() => {
             this.people = this.itemService.inspections;
         }, 15);
@@ -39,7 +39,7 @@ export class ItemsComponent implements OnInit {
 
     getAppSettings(){
 
-        let temp = JSON.parse(getString("Jobs"));
+        let temp = JSON.parse(getString("Jobs1"));
         this.people = temp;
 
     }

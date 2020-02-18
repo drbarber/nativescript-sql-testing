@@ -9982,16 +9982,27 @@ export class ItemService {
 
         console.log(`Starting Jobs size: ${JSON.stringify(jsonData).length} characters`);
         jsonData = jsonData.concat(jsonData);
+        console.log(`Concat1 Jobs size: ${JSON.stringify(jsonData).length} characters`);
         jsonData = jsonData.concat(jsonData);
+        console.log(`Concat2 Jobs size: ${JSON.stringify(jsonData).length} characters`);
         jsonData = jsonData.concat(jsonData);
+        console.log(`Concat3 Jobs size: ${JSON.stringify(jsonData).length} characters`);
         jsonData = jsonData.concat(jsonData);
+        console.log(`Concat4 Jobs size: ${JSON.stringify(jsonData).length} characters`);
         jsonData = jsonData.concat(jsonData);
+        console.log(`Concat5 Jobs size: ${JSON.stringify(jsonData).length} characters`);
         jsonData = jsonData.concat(jsonData);
+        console.log(`Concat6 Jobs size: ${JSON.stringify(jsonData).length} characters`);
         jsonData = jsonData.concat(jsonData);
+        console.log(`Concat7 Jobs size: ${JSON.stringify(jsonData).length} characters`);
         jsonData = jsonData.concat(jsonData);
+        console.log(`Concat8 Jobs size: ${JSON.stringify(jsonData).length} characters`);
         jsonData = jsonData.concat(jsonData);
+        console.log(`Concat9 Jobs size: ${JSON.stringify(jsonData).length} characters`);
         jsonData = jsonData.concat(jsonData);
-        
+        console.log(`Concat10 Jobs size: ${JSON.stringify(jsonData).length} characters`);
+        jsonData = jsonData.concat(jsonData);        
+        console.log(`Concat11 Jobs size: ${JSON.stringify(jsonData).length} characters`);
 
         // OLD        
         // setString("Jobs1", JSON.stringify(jsonData));

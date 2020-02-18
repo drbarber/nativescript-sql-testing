@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 
 import { Item } from "./item";
 import { ItemService } from "./item.service";
+import { getString } from "tns-core-modules/application-settings/application-settings";
 let sqlLite = require("nativescript-sqlite");
 
 @Component({
@@ -30,6 +31,17 @@ export class ItemsComponent implements OnInit {
         setTimeout(() => {
             this.people = this.itemService.inspections;
         }, 15);
+    }
+
+    onTestAppSettings(){
+        this.itemService.storeJobsInAppSettings();
+    }
+
+    getAppSettings(){
+
+        let temp = JSON.parse(getString("Jobs"));
+        this.people = temp;
+
     }
 }
 

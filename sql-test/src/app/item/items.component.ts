@@ -8,12 +8,13 @@ let sqlLite = require("nativescript-sqlite");
 @Component({
     selector: "ns-items",
     moduleId: module.id,
-    templateUrl: "./items.component.html"
+    templateUrl: "./items.component.html",
+    styleUrls: ['./items.component.css']
 })
 export class ItemsComponent implements OnInit {
     items: Array<Item>;
     people = [];
-    
+
     constructor(private itemService: ItemService) { }
 
     ngOnInit(): void {
@@ -21,7 +22,7 @@ export class ItemsComponent implements OnInit {
 
     addTap(): void {
         // this.itemService.insert();
-        
+
         // Use this if you want to seed the database with a bunch of data
         // this.itemService.seedDB();
     }
@@ -33,11 +34,11 @@ export class ItemsComponent implements OnInit {
         }, 15);
     }
 
-    onTestAppSettings(){
+    onTestAppSettings() {
         this.itemService.storeJobsInAppSettings();
     }
 
-    getAppSettings(){
+    getAppSettings() {
 
         let temp = JSON.parse(getString("Jobs1"));
         this.people = temp;

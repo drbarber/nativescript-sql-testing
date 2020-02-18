@@ -3,11 +3,13 @@
     <ActionItem text="Refresh" ios.position="left" (tap)="refreshTap()"></ActionItem>
 </ActionBar>
 <StackLayout>
-<Label class="font-weight-bold" fontSize="20" text="Jobs Count: {{people.length}}" textWrap="true"></Label>
+
+    <Button text="UI Test" class="rotating btn btn-primary" width="100"></Button>
     
+    <Label class="font-weight-bold" fontSize="20" text="Jobs Count: {{people.length}}" textWrap="true"></Label>
     <Button class="btn btn-primary" text="App Settings test" (tap)="onTestAppSettings()"></Button>
     <Button class="btn btn-primary" text="Get App Settings" (tap)="getAppSettings()"></Button>
-    
+
     <ListView [items]="people" height="100%">
         <ng-template let-person="item">
             <Label text="{{ person.jobId }} {{ person.name }}"></Label>

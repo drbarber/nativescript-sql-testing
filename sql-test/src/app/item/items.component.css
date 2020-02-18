@@ -1,0 +1,16 @@
+@keyframes infinite-spinning {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .rotating {
+    animation-name: infinite-spinning;
+    animation-duration: 3s; /* or: Xms */
+    animation-iteration-count: infinite;
+    animation-direction: normal; /* or: normal */
+    animation-timing-function: linear; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */    
+   }

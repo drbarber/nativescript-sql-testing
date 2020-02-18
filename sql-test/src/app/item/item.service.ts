@@ -9988,9 +9988,14 @@ export class ItemService {
         jsonData = jsonData.concat(jsonData);
         jsonData = jsonData.concat(jsonData);
         jsonData = jsonData.concat(jsonData);
-        setString("Jobs1", JSON.stringify(jsonData));
-        setString("Jobs2", JSON.stringify(jsonData));
-        console.log(`Storing string with length: ${JSON.stringify(jsonData).length}`);
+        let jsonDataString = JSON.stringify(jsonData);
+        setString("Jobs1", jsonDataString);
+        setString("Jobs2", jsonDataString);
+        console.log(`Storing Jobs1 string with length: ${jsonDataString.length}`);
+        console.log(`Storing Jobs2 string with length: ${jsonDataString.length}`);
+
+        console.log(`Total AppSettings size: ${jsonDataString.length + jsonDataString.length}`);
+
     }
 
     createDB() {

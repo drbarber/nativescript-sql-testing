@@ -9979,22 +9979,42 @@ export class ItemService {
                 ]
              }
             ];
-        jsonData = jsonData.concat(jsonData);
-        jsonData = jsonData.concat(jsonData);
-        jsonData = jsonData.concat(jsonData);
-        jsonData = jsonData.concat(jsonData);
-        jsonData = jsonData.concat(jsonData);
-        jsonData = jsonData.concat(jsonData);
-        jsonData = jsonData.concat(jsonData);
-        jsonData = jsonData.concat(jsonData);
-        jsonData = jsonData.concat(jsonData);
-        let jsonDataString = JSON.stringify(jsonData);
-        setString("Jobs1", jsonDataString);
-        setString("Jobs2", jsonDataString);
-        console.log(`Storing Jobs1 string with length: ${jsonDataString.length}`);
-        console.log(`Storing Jobs2 string with length: ${jsonDataString.length}`);
 
-        console.log(`Total AppSettings size: ${jsonDataString.length + jsonDataString.length}`);
+        console.log(`Starting Jobs size: ${JSON.stringify(jsonData).length} characters`);
+        jsonData = jsonData.concat(jsonData);
+        jsonData = jsonData.concat(jsonData);
+        jsonData = jsonData.concat(jsonData);
+        jsonData = jsonData.concat(jsonData);
+        jsonData = jsonData.concat(jsonData);
+        jsonData = jsonData.concat(jsonData);
+        jsonData = jsonData.concat(jsonData);
+        jsonData = jsonData.concat(jsonData);
+        jsonData = jsonData.concat(jsonData);
+        jsonData = jsonData.concat(jsonData);
+        
+
+        // OLD        
+        // setString("Jobs1", JSON.stringify(jsonData));
+        // setString("Jobs2", JSON.stringify(jsonData));
+        // console.log(`Storing Jobs1 string with length: ${JSON.stringify(jsonData).length}`);        
+        
+
+        // NEW
+        console.time(`JSON stringify`);
+        let jsonDataString = JSON.stringify(jsonData);
+        console.timeEnd(`JSON stringify`);
+
+        console.time(`setString jobs 1`);
+        setString("Jobs1", jsonDataString);
+        console.timeEnd(`setString jobs 1`);
+
+        console.time(`setString jobs 2`);
+        setString("Jobs2", jsonDataString);
+        console.timeEnd(`setString jobs 2`);
+        console.log(`Storing Jobs1 string with length: ${jsonDataString.length} characters`);
+        console.log(`Storing Jobs2 string with length: ${jsonDataString.length} characters`);
+
+        console.log(`Total AppSettings size: ${jsonDataString.length + jsonDataString.length} characters`);
 
     }
 

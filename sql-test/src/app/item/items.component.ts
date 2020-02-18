@@ -39,10 +39,22 @@ export class ItemsComponent implements OnInit {
     }
 
     getAppSettings() {
+        console.time(`getString Jobs1`);
+        getString("Jobs1");        
+        console.timeEnd(`getString Jobs1`);
 
-        let temp = JSON.parse(getString("Jobs1"));
-        this.people = temp;
 
+        console.time(`JSON parse Jobs1`);
+        let jobs1 = JSON.parse(getString("Jobs1"));        
+        console.timeEnd(`JSON parse Jobs1`);
+
+        console.time(`JSON parse Jobs2`);
+        let jobs2 = JSON.parse(getString("Jobs2"));        
+        console.timeEnd(`JSON parse Jobs2`);
+
+        console.time(`jobs1.concat(jobs2)`);    
+        this.people = jobs1.concat(jobs2);        
+        console.timeEnd(`jobs1.concat(jobs2)`);    
     }
 }
 

@@ -10011,11 +10011,11 @@ export class ItemService {
         console.time(`setString jobs 2`);
         setString("Jobs2", jsonDataString);
         console.timeEnd(`setString jobs 2`);
+
         console.log(`Storing Jobs1 string with length: ${jsonDataString.length} characters`);
         console.log(`Storing Jobs2 string with length: ${jsonDataString.length} characters`);
 
         console.log(`Total AppSettings size: ${jsonDataString.length + jsonDataString.length} characters`);
-
     }
 
     createDB() {

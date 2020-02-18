@@ -43,7 +43,6 @@ export class ItemsComponent implements OnInit {
         getString("Jobs1");        
         console.timeEnd(`getString Jobs1`);
 
-
         console.time(`JSON parse Jobs1`);
         let jobs1 = JSON.parse(getString("Jobs1"));        
         console.timeEnd(`JSON parse Jobs1`);
